@@ -1,4 +1,4 @@
-const env=require("dotenv").config();
+require("dotenv").config();
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const axios = require("axios");
@@ -12,8 +12,8 @@ app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 const JWT_SECRET = "super-secret-jwt-key"; // Move this to environment variable in production
 
 // Instagram Credentials
-const APP_ID = "3192770500861287";
-const APP_SECRET = "37e6ac99474ebe6423faae98076981c6";
+const APP_ID = process.env.APP_ID;
+const APP_SECRET = process.env.APP_SECRET;
 const REDIRECT_URI = "https://be91-2409-40e4-204a-bdb4-d1fa-727-d169-197b.ngrok-free.app/auth/redirect";
 
 // Step 1: Instagram Login
