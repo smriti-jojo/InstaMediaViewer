@@ -14,7 +14,7 @@ const JWT_SECRET = "super-secret-jwt-key"; // Move this to environment variable 
 // Instagram Credentials
 const APP_ID = process.env.APP_ID;
 const APP_SECRET = process.env.APP_SECRET;
-const REDIRECT_URI = "https://be91-2409-40e4-204a-bdb4-d1fa-727-d169-197b.ngrok-free.app/auth/redirect";
+const REDIRECT_URI = "https://instamediaviewer-backend.onrender.com/auth/redirect";
 
 // Step 1: Instagram Login
 app.get("/auth/instagram", (req, res) => {
