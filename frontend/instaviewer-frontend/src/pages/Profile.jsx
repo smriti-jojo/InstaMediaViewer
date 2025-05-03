@@ -21,7 +21,7 @@ const Profile = () => {
     if (!token) return;
 
     axios
-      .get("https://be91-2409-40e4-204a-bdb4-d1fa-727-d169-197b.ngrok-free.app/profile", {
+      .get("https://instamediaviewer-backend.onrender.com/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
