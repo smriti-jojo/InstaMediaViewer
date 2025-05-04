@@ -7,7 +7,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: "https://instamediaviewer.onrender.com", credentials: true }));
 
 const JWT_SECRET = "super-secret-jwt-key"; // Move this to environment variable in production
 
@@ -49,7 +49,7 @@ app.get("/auth/redirect", async (req, res) => {
     const token = jwt.sign({ access_token, user_id }, JWT_SECRET, { expiresIn: "1h" });
 
     // Send JWT to frontend (could be via redirect + query param or response body)
-    res.redirect(`http://localhost:3000/profile?token=${token}`);
+    res.redirect(`https://instamediaviewer.onrender.com/profile?token=${token}`);
   } catch (error) {
     console.error("Error exchanging code for access token:", error.message);
     res.status(500).send("Error fetching access token");
