@@ -12,8 +12,9 @@ app.use(cors({ origin: "https://instamediaviewer.onrender.com", credentials: tru
 const JWT_SECRET = "super-secret-jwt-key"; // Move this to environment variable in production
 
 // Instagram Credentials
-const APP_ID = process.env.APP_ID;
-const APP_SECRET = process.env.APP_SECRET;
+
+const APP_ID = 3192770500861287;
+const APP_SECRET = 37e6ac99474ebe6423faae98076981c6;
 const REDIRECT_URI = "https://instamediaviewer-backend.onrender.com/auth/redirect";
 
 // Step 1: Instagram Login
